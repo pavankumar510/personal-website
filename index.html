@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulukam Pavan Kumar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4b79a1, #283e51);
+            color: white;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .header {
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        h2 {
+            color: #f0db4f;
+        }
+        .contact {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .contact a {
+            color: #f0db4f;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: #f0db4f;
+            color: #333;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #ffdd57;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .dark-mode {
+            background: linear-gradient(to right, #232526, #414345);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <div class="header">
+        <h1>Pulukam Pavan Kumar</h1>
+        <p>Data Analyst | Machine Learning Enthusiast | Web Developer</p>
+        <img src="WhatsApp Image 2025-02-17 at 12.12.52_5a1ac932.jpg" alt="Pulukam Pavan Kumar" class="profile-img">
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>I am a passionate data analyst with experience in machine learning, deep learning, and data visualization. I love extracting insights from complex datasets to drive decision-making.</p>
+        </div>
+        <div class="card">
+            <h2>Education</h2>
+            <p><strong>Florida Atlantic University</strong> (2023-2025)</p>
+            <p>Masters in Data Science and Business Analytics | GPA: 3.85</p>
+        </div>
+        <div class="card">
+            <h2>Work Experience</h2>
+            <p><strong>Capgemini - Technical Training (Data Analyst) (2022)</strong></p>
+            <ul>
+                <li>Completed hands-on training in Python, SQL, and Cloud Computing.</li>
+                <li>Developed proficiency in data analysis, database management.</li>
+            </ul>
+            <p><strong>Internship - Deep learning and NLP</strong></p>
+            <p>Project: Resume Classification Using Deep Learning.</p>
+            <ul>
+                <li>Developed an automated resume screening system using NLP and deep learning models (LSTMs).</li>
+                <li>Optimized classification accuracy by 20%, improving recruitment efficiency.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Skills</h2>
+            <p>Python, SQL, Machine Learning, Tableau, Power BI, NLP, Deep Learning, Cloud Computing</p>
+        </div>
+        <div class="card">
+            <h2>Download Resume</h2>
+            <button onclick="window.location.href='c:/Users/satam/Downloads/pulukam pavan kumar data scientist.pdf'">Download Resume</button>
+        </div>
+    </div>
+    <div class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:pulukampavankumar01@gmail.com">pulukampavankumar01@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/pulukam-pavan-kumar">LinkedIn Profile</a></p>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
