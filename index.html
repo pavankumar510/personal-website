@@ -363,6 +363,41 @@
             transform: translateY(1px);
         }
         
+        /* Project cards */
+        .project-card {
+            background: rgba(26, 42, 108, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--accent);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .project-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+        
+        .project-links a:hover {
+            color: var(--tertiary);
+        }
+        
         /* Contact section */
         .contact {
             padding: 80px 20px;
@@ -460,31 +495,6 @@
             50% { transform: translateY(-10px); }
         }
         
-        /* Progress bars for skills */
-        .skill-meter {
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            margin: 15px 0;
-            overflow: hidden;
-            height: 8px;
-        }
-        
-        .skill-level {
-            height: 100%;
-            border-radius: 10px;
-            background: linear-gradient(90deg, var(--accent), var(--tertiary));
-            position: relative;
-            transition: width 1.5s ease;
-        }
-        
-        .skill-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
         /* Data science elements floating animation */
         @keyframes floatElement {
             0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -557,15 +567,15 @@
     <header class="header">
         <div class="header-content">
             <h1>Pulukam Pavan Kumar</h1>
-            <p class="tagline">Transforming Data into Decisions</p>
+            <p class="tagline">Data Scientist | Machine Learning Engineer | AI Enthusiast</p>
             <div class="profile-img-container">
                 <img src="WhatsApp Image 2025-02-17 at 12.12.52_5a1ac932.jpg" alt="Pulukam Pavan Kumar" class="profile-img">
             </div>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/pulukam-pavan-kumar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:pulukampavankumar01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="pulukam pavan kumar data scienece resume .pdf" download aria-label="Download Resume"><i class="fas fa-file-download"></i></a>
+                <a href="https://www.linkedin.com/in/pulukam-pavan-kumar-734595192/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/pavankumar510" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:Pavankumarpulukan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://pavankumar510.github.io/personal-website/" target="_blank" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
             </div>
         </div>
     </header>
@@ -573,35 +583,34 @@
     <div class="container">
         <div class="card" id="about">
             <h2>About Me</h2>
-            <p>I am a passionate <strong>Data Scientist</strong> with expertise in machine learning, deep learning, and data visualization. I specialize in transforming complex datasets into actionable insights that drive business decisions.</p>
-            <p>With a strong foundation in statistical analysis and programming, I build intelligent systems that learn from data to solve real-world problems across various domains.</p>
+            <p>I am a passionate <strong>Data Scientist</strong> currently pursuing my Master's in Data Science and Analytics at Florida Atlantic University with a 3.85 GPA. I specialize in building machine learning models and extracting actionable insights from complex datasets.</p>
+            <p>With experience in NLP, deep learning, and predictive analytics, I bridge the gap between data and business decisions. My technical expertise spans Python, SQL, TensorFlow, and various data visualization tools.</p>
             <div class="skills-container">
-                <span class="skill">Predictive Modeling</span>
-                <span class="skill">Neural Networks</span>
-                <span class="skill">Data Mining</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Deep Learning</span>
                 <span class="skill">Natural Language Processing</span>
+                <span class="skill">Predictive Analytics</span>
             </div>
         </div>
         
         <div class="card" id="education">
             <h2>Education</h2>
             <p><strong>Florida Atlantic University</strong> (2023-2025)</p>
-            <p>Masters in Data Science and Business Analytics | GPA: 3.85</p>
+            <p>Masters in Data Science and Analytics | GPA: 3.85</p>
             <div class="skill-meter">
                 <div class="skill-level" style="width: 90%"></div>
             </div>
             
-            <h3>Research Focus</h3>
-            <p>My academic research focuses on developing novel deep learning architectures for unstructured data analysis, particularly in the domains of computer vision and natural language processing.</p>
-            
             <h3>Relevant Coursework</h3>
             <div class="skills-container">
-                <span class="skill">Advanced Machine Learning</span>
-                <span class="skill">Big Data Analytics</span>
+                <span class="skill">Business Analytics</span>
+                <span class="skill">Natural Language Processing</span>
                 <span class="skill">Deep Learning</span>
-                <span class="skill">Statistical Modeling</span>
-                <span class="skill">Data Visualization</span>
-                <span class="skill">Time Series Analysis</span>
+                <span class="skill">Database Management</span>
+                <span class="skill">Data Mining</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Gen AI</span>
+                <span class="skill">Artificial Intelligence</span>
             </div>
         </div>
         
@@ -612,48 +621,92 @@
                 <h3>Data Analyst | Capgemini</h3>
                 <p><em>Technical Training Program | 2022</em></p>
                 <ul>
-                    <li>Developed ETL pipelines to process and analyze large-scale datasets using Python and SQL, improving data processing efficiency by 35%</li>
-                    <li>Created interactive dashboards that provided real-time business insights, reducing decision-making time by 40%</li>
-                    <li>Implemented cloud-based data solutions on AWS, reducing infrastructure costs by 25%</li>
+                    <li>Completed comprehensive hands-on training in Python programming, SQL database management, and Cloud Computing</li>
+                    <li>Developed proficiency in data analysis and database management systems</li>
+                    <li>Implemented ETL processes for large-scale data transformation</li>
                 </ul>
             </div>
             
             <div class="experience-item">
-                <h3>Deep Learning Research Intern</h3>
-                <p><em>Resume Classification Using Deep Learning</em></p>
+                <h3>Data Science Intern | Excel Solutions</h3>
+                <p><em>Deep Learning and NLP Project</em></p>
                 <ul>
-                    <li>Developed a transformer-based NLP model for resume classification that achieved 92% accuracy</li>
-                    <li>Optimized the model architecture using attention mechanisms, reducing training time by 30%</li>
-                    <li>Deployed the model as a REST API with Flask, processing over 1,000 resumes daily</li>
-                    <li>Created an interactive visualization dashboard to explain model decisions to HR professionals</li>
+                    <li>Developed an automated resume screening system using LSTM networks with 20% improved accuracy</li>
+                    <li>Applied NLP techniques including tokenization, vectorization, and word embeddings</li>
+                    <li>Optimized model performance through hyperparameter tuning and feature engineering</li>
+                    <li>Reduced manual screening time by 40% for HR teams</li>
                 </ul>
-                <div class="skills-container" style="margin-top: 15px;">
+            </div>
+        </div>
+        
+        <div class="card" id="projects">
+            <h2>Featured Projects</h2>
+            <p>Here are some of my data science projects from GitHub and academic work:</p>
+            
+            <div class="project-card">
+                <h3>Resume Classification Using Deep Learning</h3>
+                <p>Developed an LSTM-based model to automatically classify resumes into categories with 92% accuracy. Implemented NLP preprocessing and hyperparameter optimization.</p>
+                <div class="skills-container" style="margin: 10px 0;">
+                    <span class="skill">Python</span>
                     <span class="skill">TensorFlow</span>
-                    <span class="skill">Transformers</span>
-                    <span class="skill">Flask</span>
                     <span class="skill">NLP</span>
+                    <span class="skill">LSTM</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/pavankumar510/assignments" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h3>Stock Market Price Prediction</h3>
+                <p>Built predictive models using XGBoost, Random Forest, and LSTM to forecast stock trends with 85% accuracy. Conducted feature engineering and technical analysis.</p>
+                <div class="skills-container" style="margin: 10px 0;">
+                    <span class="skill">Python</span>
+                    <span class="skill">XGBoost</span>
+                    <span class="skill">LSTM</span>
+                    <span class="skill">Time Series</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/pavankumar510/assignments" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h3>Liver Cirrhosis Prediction</h3>
+                <p>Developed a predictive model using XGBoost and Logistic Regression that achieved 87% accuracy in early disease detection from medical data.</p>
+                <div class="skills-container" style="margin: 10px 0;">
+                    <span class="skill">Python</span>
+                    <span class="skill">XGBoost</span>
+                    <span class="skill">Logistic Regression</span>
+                    <span class="skill">Healthcare Analytics</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/pavankumar510/assignments" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h3>Facial Recognition System</h3>
+                <p>Designed a CNN-based facial recognition system using OpenCV and TensorFlow with 92% accuracy. Implemented data augmentation for improved model robustness.</p>
+                <div class="skills-container" style="margin: 10px 0;">
+                    <span class="skill">Python</span>
+                    <span class="skill">TensorFlow</span>
+                    <span class="skill">OpenCV</span>
+                    <span class="skill">Computer Vision</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/pavankumar510/assignments" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
         </div>
         
         <div class="card" id="skills">
-            <h2>Technical Expertise</h2>
-            <p>I've developed a comprehensive skill set through academic study and practical application across multiple data science projects.</p>
+            <h2>Technical Skills</h2>
             
-            <h3>Core Competencies</h3>
-            <div class="skills-container">
-                <span class="skill">Machine Learning</span>
-                <span class="skill">Deep Learning</span>
-                <span class="skill">Data Visualization</span>
-                <span class="skill">Statistical Analysis</span>
-                <span class="skill">Big Data Processing</span>
-                <span class="skill">Cloud Computing</span>
-            </div>
-            
-            <h3>Programming & Tools</h3>
+            <h3>Programming Languages</h3>
             <div class="skill-item">
                 <div class="skill-label">
-                    <span>Python (Pandas, NumPy, Scikit-learn)</span>
+                    <span>Python</span>
                     <span>95%</span>
                 </div>
                 <div class="skill-meter">
@@ -663,7 +716,7 @@
             
             <div class="skill-item">
                 <div class="skill-label">
-                    <span>SQL & NoSQL Databases</span>
+                    <span>SQL</span>
                     <span>90%</span>
                 </div>
                 <div class="skill-meter">
@@ -671,63 +724,54 @@
                 </div>
             </div>
             
-            <div class="skill-item">
-                <div class="skill-label">
-                    <span>TensorFlow/PyTorch</span>
-                    <span>88%</span>
-                </div>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 88%"></div>
-                </div>
+            <h3>Machine Learning</h3>
+            <div class="skills-container">
+                <span class="skill">Supervised Learning</span>
+                <span class="skill">Unsupervised Learning</span>
+                <span class="skill">Deep Learning</span>
+                <span class="skill">NLP</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">Scikit-learn</span>
+                <span class="skill">XGBoost</span>
             </div>
             
-            <div class="skill-item">
-                <div class="skill-label">
-                    <span>Tableau/Power BI</span>
-                    <span>85%</span>
-                </div>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 85%"></div>
-                </div>
+            <h3>Data Analysis & Visualization</h3>
+            <div class="skills-container">
+                <span class="skill">Pandas</span>
+                <span class="skill">NumPy</span>
+                <span class="skill">Matplotlib</span>
+                <span class="skill">Seaborn</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">Power BI</span>
             </div>
             
-            <div class="skill-item">
-                <div class="skill-label">
-                    <span>AWS/GCP</span>
-                    <span>80%</span>
-                </div>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 80%"></div>
-                </div>
+            <h3>Other Technologies</h3>
+            <div class="skills-container">
+                <span class="skill">Git</span>
+                <span class="skill">Jupyter</span>
+                <span class="skill">Google Colab</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Docker</span>
             </div>
         </div>
         
-        <div class="card" id="projects">
-            <h2>Featured Projects</h2>
-            
-            <h3>Predictive Maintenance System</h3>
-            <p>Developed a machine learning model to predict equipment failures in manufacturing plants using sensor data, reducing downtime by 30%.</p>
-            <div class="skills-container" style="margin: 10px 0;">
-                <span class="skill">Time Series Analysis</span>
-                <span class="skill">Random Forest</span>
-                <span class="skill">IoT Data</span>
-            </div>
-            
-            <h3>Sentiment Analysis for Product Reviews</h3>
-            <p>Built a BERT-based model to analyze customer sentiment from product reviews with 89% accuracy, helping businesses improve products.</p>
-            <div class="skills-container" style="margin: 10px 0;">
-                <span class="skill">NLP</span>
-                <span class="skill">BERT</span>
-                <span class="skill">Flask</span>
-            </div>
-            
-            <h3>Customer Churn Prediction</h3>
-            <p>Created an ensemble model to predict customer churn for a telecom company, identifying 85% of at-risk customers.</p>
-            <div class="skills-container" style="margin: 10px 0;">
-                <span class="skill">XGBoost</span>
-                <span class="skill">Feature Engineering</span>
-                <span class="skill">SHAP Values</span>
-            </div>
+        <div class="card" id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li><strong>Machine Learning Specialization</strong> - University of Michigan (Coursera)</li>
+                <li><strong>CCNAv7: Introduction to Networks</strong> - Cisco</li>
+                <li><strong>IT Essentials & Introduction to IoT</strong> - Cisco</li>
+                <li><strong>Cybersecurity Certifications</strong> - Palo Alto Networks:
+                    <ul>
+                        <li>Fundamentals of Cloud Security</li>
+                        <li>Fundamentals of Network Security</li>
+                        <li>Introduction to Cybersecurity</li>
+                        <li>Security Operations Center (SOC) Fundamentals</li>
+                    </ul>
+                </li>
+                <li><strong>Hackathon Participant</strong> - Call for Code (IBM, IEEE, NextEra Energy, Synergist)</li>
+            </ul>
         </div>
         
         <div class="card" id="resume">
@@ -742,14 +786,18 @@
     <section class="contact" id="contact">
         <h2>Let's Connect</h2>
         <div class="contact-info">
-            <p>I'm always interested in hearing about new opportunities in data science and machine learning. Whether you have a question or just want to say hello, I'll do my best to get back to you!</p>
-            <p>Email: <a href="mailto:pulukampavankumar01@gmail.com">pulukampavankumar01@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/pulukam-pavan-kumar" target="_blank">linkedin.com/in/pulukam-pavan-kumar</a></p>
+            <p>I'm actively seeking full-time opportunities in Data Science and Machine Learning. Feel free to reach out for collaborations or just to say hello!</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:Pavankumarpulukan@gmail.com">Pavankumarpulukan@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> +1 (561)-207-0395</p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pulukam-pavan-kumar-734595192/" target="_blank">linkedin.com/in/pulukam-pavan-kumar</a></p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/pavankumar510" target="_blank">github.com/pavankumar510</a></p>
+            <p><i class="fas fa-globe"></i> <a href="https://pavankumar510.github.io/personal-website/" target="_blank">My Personal Website</a></p>
             
             <div class="social-links" style="margin-top: 30px;">
-                <a href="https://www.linkedin.com/in/pulukam-pavan-kumar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:pulukampavankumar01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/pulukam-pavan-kumar-734595192/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/pavankumar510" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:Pavankumarpulukan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://pavankumar510.github.io/personal-website/" target="_blank" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
             </div>
         </div>
     </section>
@@ -796,7 +844,7 @@
             
             // Create matrix code rain
             function createMatrixCode() {
-                const chars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+                const chars = "data science, data analyst, machine learning, Mysql, artificial intelligence, data, big data, data, deep learning";
                 const code = document.createElement('div');
                 code.className = 'matrix-code';
                 code.textContent = Array(20).fill(0).map(() => 
@@ -895,10 +943,6 @@
         // Initialize data background
         document.addEventListener('DOMContentLoaded', () => {
             createDataBackground();
-            
-            // Add current year to footer if needed
-            const year = new Date().getFullYear();
-            // You can add this to a footer if you create one
         });
     </script>
 </body>
