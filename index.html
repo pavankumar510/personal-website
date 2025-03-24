@@ -62,30 +62,41 @@
             pointer-events: none;
         }
         
-        .matrix-code {
+        .matrix-column {
             position: absolute;
-            color: rgba(0, 255, 100, 0.2);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 14px;
-            opacity: 0;
+            top: -20%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
             animation: matrixFall linear infinite;
+            font-family: 'JetBrains Mono', monospace;
+            color: rgba(0, 255, 100, 0.3);
+            font-size: 14px;
             pointer-events: none;
         }
-        
+
+        .matrix-keyword {
+            animation: keywordPulse 2s ease-in-out infinite alternate;
+            white-space: nowrap;
+        }
+
         @keyframes matrixFall {
             0% {
                 transform: translateY(-100%);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.8;
-            }
-            90% {
-                opacity: 0.8;
             }
             100% {
-                transform: translateY(100vh);
-                opacity: 0;
+                transform: translateY(120vh);
+            }
+        }
+
+        @keyframes keywordPulse {
+            0% {
+                opacity: 0.3;
+                text-shadow: 0 0 5px rgba(0, 255, 100, 0.3);
+            }
+            100% {
+                opacity: 0.7;
+                text-shadow: 0 0 10px rgba(0, 255, 100, 0.5);
             }
         }
         
@@ -574,7 +585,7 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/pulukam-pavan-kumar-734595192/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/pavankumar510" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:Pavankumarpulukan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:Pavankumarpulukam@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://pavankumar510.github.io/personal-website/" target="_blank" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
             </div>
         </div>
@@ -777,7 +788,7 @@
         <div class="card" id="resume">
             <h2>Download Resume</h2>
             <p>Get a comprehensive overview of my technical skills, professional experience, and academic background.</p>
-            <a href="pulukam pavan kumar data scienece resume .pdf" download class="btn">
+            <a href="pulukam pavan kumar data scienece resume.pdf" download class="btn">
                 <i class="fas fa-download"></i> Download Resume
             </a>
         </div>
@@ -787,7 +798,7 @@
         <h2>Let's Connect</h2>
         <div class="contact-info">
             <p>I'm actively seeking full-time opportunities in Data Science and Machine Learning. Feel free to reach out for collaborations or just to say hello!</p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:Pavankumarpulukan@gmail.com">Pavankumarpulukan@gmail.com</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:Pavankumarpulukam@gmail.com">Pavankumarpulukam@gmail.com</a></p>
             <p><i class="fas fa-phone"></i> +1 (561)-207-0395</p>
             <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pulukam-pavan-kumar-734595192/" target="_blank">linkedin.com/in/pulukam-pavan-kumar</a></p>
             <p><i class="fab fa-github"></i> <a href="https://github.com/pavankumar510" target="_blank">github.com/pavankumar510</a></p>
@@ -796,7 +807,7 @@
             <div class="social-links" style="margin-top: 30px;">
                 <a href="https://www.linkedin.com/in/pulukam-pavan-kumar-734595192/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/pavankumar510" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:Pavankumarpulukan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:Pavankumarpulukam@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://pavankumar510.github.io/personal-website/" target="_blank" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
             </div>
         </div>
@@ -842,27 +853,45 @@
                 container.appendChild(connection);
             }
             
-            // Create matrix code rain
+            // Create matrix code rain with data science keywords
             function createMatrixCode() {
-                const chars = "data science, data analyst, machine learning, Mysql, artificial intelligence, data, big data, data, deep learning";
-                const code = document.createElement('div');
-                code.className = 'matrix-code';
-                code.textContent = Array(20).fill(0).map(() => 
-                    chars[Math.floor(Math.random() * chars.length)]
-                ).join('');
-                code.style.left = `${Math.random() * 100}%`;
-                code.style.animationDuration = `${Math.random() * 10 + 10}s`;
-                container.appendChild(code);
+                const keywords = [
+                    "DATA SCIENCE", "MACHINE LEARNING", "DEEP LEARNING", "PYTHON",
+                    "TENSORFLOW", "PANDAS", "NUMPY", "SQL", "TABLEAU", "NEURAL NETWORKS",
+                    "NLP", "COMPUTER VISION", "STATISTICS", "XGBOOST", "RANDOM FOREST"
+                ];
                 
-                setTimeout(() => {
-                    code.remove();
-                }, parseFloat(code.style.animationDuration) * 1000);
+                // Create multiple columns of falling keywords
+                for (let i = 0; i < 5; i++) {
+                    const column = document.createElement('div');
+                    column.className = 'matrix-column';
+                    column.style.left = `${10 + (i * 20)}%`;
+                    column.style.animationDuration = `${Math.random() * 15 + 10}s`;
+                    column.style.animationDelay = `${Math.random() * 5}s`;
+                    
+                    // Create 5-8 keywords per column
+                    const keywordCount = Math.floor(Math.random() * 4) + 5;
+                    for (let j = 0; j < keywordCount; j++) {
+                        const keyword = document.createElement('div');
+                        keyword.className = 'matrix-keyword';
+                        keyword.textContent = keywords[Math.floor(Math.random() * keywords.length)];
+                        keyword.style.opacity = Math.random() * 0.5 + 0.3;
+                        keyword.style.animationDelay = `${j * 0.5}s`;
+                        column.appendChild(keyword);
+                    }
+                    
+                    container.appendChild(column);
+                    
+                    setTimeout(() => {
+                        column.remove();
+                    }, parseFloat(column.style.animationDuration) * 1000);
+                }
             }
             
             // Start matrix code rain
             setInterval(createMatrixCode, 300);
         }
-        
+
         // Theme toggle functionality
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
